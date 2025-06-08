@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# VSCode / IDEs
+.vscode/
+.idea/
+
+# Environment / virtualenv
+.env
+.venv/
+env/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets
+keys.py
+credentials.json
+
+# Jupyter (if any)
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# Misc
+*.bak
