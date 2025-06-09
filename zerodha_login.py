@@ -1,6 +1,7 @@
 import time
 import pyotp
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
@@ -20,9 +21,8 @@ def zerodha_login():
     chrome_options.add_argument("--disable-gpu")
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--incognito")
-    Path = "C:\\Program Files (x86)\\chromedriver.exe"
-    service = Service(Path)
-    driver = webdriver.Chrome(service=service,options=chrome_options)
+    service = Service(ChromeDriverManager().install())
+    driver = webdriver.Chrome(service=service, options=chrome_options)
     wait = WebDriverWait(driver, 20)
 
     try:
