@@ -161,6 +161,7 @@ scikit-learn==1.6.1
 scipy==1.11.4
 seaborn @ file:///C:/ci_311/seaborn_1676446547861/work
 selenium==4.33.0
+webdriver-manager==4.0.1
 Send2Trash @ file:///tmp/build/80754af9/send2trash_1632406701022/work
 service-identity==24.2.0
 sgmllib3k @ file:///Users/ktietz/demo/mc3/conda-bld/sgmllib3k_1630650258356/work
