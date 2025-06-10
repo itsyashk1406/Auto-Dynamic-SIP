@@ -23,9 +23,9 @@ jobs:
         with:
           chrome-version: stable
           
-      - name: Install ChromeDriver manually (matches Chrome version)
+      - name: Install ChromeDriver manually (version match)
         run: |
-          CHROME_VERSION=$(google-chrome --version | grep -oP '\d+\.\d+\.\d+')
+          CHROME_VERSION=$(google-chrome --version | grep -oP '\d+\.\d+\.\d+\.\d+')
           echo "Installing ChromeDriver for version $CHROME_VERSION"
           wget -q "https://storage.googleapis.com/chrome-for-testing-public/$CHROME_VERSION/linux64/chromedriver-linux64.zip"
           unzip chromedriver-linux64.zip
