@@ -42,7 +42,7 @@ jobs:
           echo "ZERODHA_TOTP_KEY=${{ secrets.ZERODHA_TOTP_KEY }}" >> $GITHUB_ENV
           
       - name: Write Google Credentials to File
-        run: echo "${{ secrets.GOOGLE_CREDENTIALS_JSON }}" > credentials.json        
+        run: printf "%s" '${{ secrets.GOOGLE_CREDENTIALS_JSON }}' > credentials.json        
 
       - name: Run SIP Script
         run: python dynamic_sip.py
