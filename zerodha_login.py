@@ -1,3 +1,4 @@
+import os
 import time
 import pyotp
 from selenium import webdriver
@@ -9,7 +10,12 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException, NoSuchElementException
 from kiteconnect import KiteConnect
-from keys import *
+
+api_key = os.getenv("ZERODHA_API_KEY")
+api_secret = os.getenv("ZERODHA_API_SECRET")
+totp_key = os.getenv("ZERODHA_TOTP_KEY")
+user_id = os.getenv("ZERODHA_USER_ID")
+user_password = os.getenv("ZERODHA_USER_PASSWORD")
 
 def zerodha_login():
     kite = KiteConnect(api_key=api_key)
