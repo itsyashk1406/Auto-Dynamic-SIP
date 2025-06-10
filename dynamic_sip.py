@@ -2,7 +2,6 @@
 import pandas as pd
 import numpy as np
 from kiteconnect import KiteConnect
-from keys import *
 from zerodha_login import zerodha_login
 from datetime import datetime ,timedelta
 import gspread
