@@ -23,10 +23,15 @@ jobs:
         with:
           chrome-version: stable
           
-      - name: Set up ChromeDriver
-        uses: nanasess/setup-chromedriver@v2
-        with:
-          chrome-version: stable
+      - name: Install ChromeDriver manually (matches Chrome version)
+        run: |
+          CHROME_VERSION=$(google-chrome --version | grep -oP '\d+\.\d+\.\d+')
+          echo "Installing ChromeDriver for version $CHROME_VERSION"
+          wget -q "https://storage.googleapis.com/chrome-for-testing-public/$CHROME_VERSION/linux64/chromedriver-linux64.zip"
+          unzip chromedriver-linux64.zip
+          sudo mv chromedriver-linux64/chromedriver /usr/local/bin/chromedriver
+          sudo chmod +x /usr/local/bin/chromedriver
+          chromedriver --version
           
       - name: Install Python dependencies
         run: |
