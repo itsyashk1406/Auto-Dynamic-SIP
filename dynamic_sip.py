@@ -24,8 +24,8 @@ holdings_map={
 ABCAPITAL={"symbol":"ABCAPITAL","qty":1,"dqty":2,"max_investment":14760}
 MOTILALOFS={"symbol":"MOTILALOFS","qty":1,"dqty":1,"max_investment":24000}
 JSWENERGY={"symbol":"JSWENERGY","qty":1,"dqty":2,"max_investment":12000}
-TATAPOWER={"symbol":"TATAPOWER","qty":1,"dqty":2,"max_investment":12000}
-stocks_list=[ABCAPITAL,MOTILALOFS,JSWENERGY,TATAPOWER]
+JSWSTEEL={"symbol":"JSWSTEEL","qty":1,"dqty":2,"max_investment":12000}
+stocks_list=[ABCAPITAL,MOTILALOFS,JSWENERGY,JSWSTEEL]
 
 curr_date=datetime.today()
 for stock in stocks_list:
